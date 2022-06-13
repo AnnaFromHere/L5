@@ -1,0 +1,16 @@
+{
+    "request": {
+        "urlPathPattern": "/service",
+		"queryParameters": {
+			"name": {
+				"matches": "([a-zA-Z0-9_\/,]+)"
+			}
+		},
+		"method": "GET"
+	},
+    "response": {
+        "status": 200,
+        "jsonBody": {"id": 1,
+		             "name": "{{request.query.name}}"
+		            }
+}}

@@ -1,0 +1,16 @@
+{
+    "request": {
+        "urlPathPattern": "/phones",
+		"bodyPatterns": [
+		       {
+				   "matchesJsonPath": "$.[?(@.phone=~/[+][0-9]{11}/)]"			                         
+			   }
+			            ],			  
+				
+
+		"method": "GET"
+	},
+    "response": {
+        "status": 200,
+	"jsonBody": {"Name": "John"}
+}}

@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "13253a10-1e7b-4fca-b3ad-20081b3948eb",
+		"name": "HW5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20216762"
+	},
+	"item": [
+		{
+			"name": "GetServiceByNameParam",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/service?name=tunes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"service"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "tunes"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetReceiptByPriceDateParam",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transaction?price=400&date=12-06-2022",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaction"
+					],
+					"query": [
+						{
+							"key": "price",
+							"value": "400"
+						},
+						{
+							"key": "date",
+							"value": "12-06-2022"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UsersReqBodyCheck",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"users\": [\r\n        {\r\n            \"name\": \"user10\"\r\n        },\r\n        {\r\n            \"name\": \"user20\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ErrorReqBodyCheck",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"error\": \"123\",\r\n\"description\": \"Division by zero\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/errors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"errors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PhoneReqBodyCheck",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"phone\": \"+79253335551\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/phones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"phones"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
